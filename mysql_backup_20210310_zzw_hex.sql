@@ -1,7 +1,3 @@
--- Dump created by MySQL pump utility, version: 8.0.23, Win64 (x86_64)
--- Dump start time: Wed Mar 10 15:50:55 2021
--- Server version: 8.0.23
-
 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE;
