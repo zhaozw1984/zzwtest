@@ -67,3 +67,13 @@
 2025-08-05 06:00:51.251 | DEBUG    | entity_extractor:extract_entities:194 - Entity: alarm_type = 高温报警 (confidence: 0.9)
 2025-08-05 06:00:51.251 | WARNING  | llm_client:analyze_command:84 - LLM client not initialized, skipping LLM analysis
 2025-08-05 06:00:51.251 | INFO     | nlp_processor:process_command:55 - Command processed: alarm_handling with confidence 0.66
+2025-08-05 06:38:20.240 | WARNING  | llm_client:__init__:29 - No SiliconFlow API key provided, LLM features will be disabled
+2025-08-05 06:38:20.242 | INFO     | nlp_processor:process_command:24 - Processing command: 巡检A区2号房主柜温度
+2025-08-05 06:38:20.243 | INFO     | intent_classifier:classify_intent:112 - Classified intent: patrol_inspection (巡检) with confidence 0.71
+2025-08-05 06:38:20.593 | INFO     | entity_extractor:extract_entities:192 - Extracted 4 entities from text: 巡检A区2号房主柜温度
+2025-08-05 06:38:20.593 | DEBUG    | entity_extractor:extract_entities:194 - Entity: location = A区 (confidence: 0.9)
+2025-08-05 06:38:20.593 | DEBUG    | entity_extractor:extract_entities:194 - Entity: location = 2号房 (confidence: 0.9)
+2025-08-05 06:38:20.593 | DEBUG    | entity_extractor:extract_entities:194 - Entity: equipment = 主柜 (confidence: 0.9)
+2025-08-05 06:38:20.593 | DEBUG    | entity_extractor:extract_entities:194 - Entity: parameter = 温度 (confidence: 0.9)
+2025-08-05 06:38:20.593 | WARNING  | llm_client:analyze_command:89 - SiliconFlow client not initialized, skipping LLM analysis
+2025-08-05 06:38:20.593 | INFO     | nlp_processor:process_command:55 - Command processed: patrol_inspection with confidence 0.62

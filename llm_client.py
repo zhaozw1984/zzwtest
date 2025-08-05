@@ -8,15 +8,15 @@ from typing import Dict, Any, Optional
 from loguru import logger
 from openai import OpenAI
 
-from config import OPENAI_API_KEY, OPENAI_BASE_URL, MODEL_NAME, INTENT_TYPES, ENTITY_TYPES
+from config import SILICONFLOW_API_KEY, SILICONFLOW_BASE_URL, MODEL_NAME, INTENT_TYPES, ENTITY_TYPES
 from models import LLMResponse
 
 class LLMClient:
-    """大模型客户端"""
+    """硅基流动大模型客户端"""
     
     def __init__(self):
-        self.api_key = OPENAI_API_KEY
-        self.base_url = OPENAI_BASE_URL
+        self.api_key = SILICONFLOW_API_KEY
+        self.base_url = SILICONFLOW_BASE_URL
         self.model_name = MODEL_NAME
         
         if self.api_key:
@@ -24,8 +24,9 @@ class LLMClient:
                 api_key=self.api_key,
                 base_url=self.base_url
             )
+            logger.info(f"Initialized SiliconFlow client with model: {self.model_name}")
         else:
-            logger.warning("No OpenAI API key provided, LLM features will be disabled")
+            logger.warning("No SiliconFlow API key provided, LLM features will be disabled")
             self.client = None
     
     def _build_system_prompt(self) -> str:
@@ -74,19 +75,24 @@ class LLMClient:
     }}
 }}
 
-请严格按照JSON格式返回结果，不要包含其他内容。"""
+重要提示：
+1. 请严格按照JSON格式返回结果，不要包含其他内容
+2. 确保JSON格式正确，可以被Python json.loads()解析
+3. 如果无法识别意图，请将intent_type设为"unknown"
+4. 实体的start和end位置要准确对应原文中的字符位置"""
         
         return system_prompt
     
     def analyze_command(self, text: str) -> Optional[LLMResponse]:
-        """使用大模型分析指令"""
+        """使用硅基流动大模型分析指令"""
         if not self.client:
-            logger.warning("LLM client not initialized, skipping LLM analysis")
+            logger.warning("SiliconFlow client not initialized, skipping LLM analysis")
             return None
         
         try:
             system_prompt = self._build_system_prompt()
             
+            logger.debug(f"Calling SiliconFlow API with model: {self.model_name}")
             response = self.client.chat.completions.create(
                 model=self.model_name,
                 messages=[
@@ -94,31 +100,40 @@ class LLMClient:
                     {"role": "user", "content": text}
                 ],
                 temperature=0.1,
-                max_tokens=1000
+                max_tokens=1500
             )
             
             content = response.choices[0].message.content.strip()
-            logger.debug(f"LLM response: {content}")
+            logger.debug(f"SiliconFlow response: {content}")
+            
+            # 清理响应内容，移除可能的markdown格式
+            if content.startswith("```json"):
+                content = content[7:]
+            if content.endswith("```"):
+                content = content[:-3]
+            content = content.strip()
             
             # 解析JSON响应
             try:
                 result_data = json.loads(content)
                 llm_response = LLMResponse(**result_data)
+                logger.info(f"Successfully parsed SiliconFlow response for text: {text}")
                 return llm_response
             except json.JSONDecodeError as e:
-                logger.error(f"Failed to parse LLM response as JSON: {e}")
+                logger.error(f"Failed to parse SiliconFlow response as JSON: {e}")
                 logger.error(f"Raw response: {content}")
                 return None
             except Exception as e:
                 logger.error(f"Failed to create LLMResponse: {e}")
+                logger.error(f"Response data: {result_data}")
                 return None
                 
         except Exception as e:
-            logger.error(f"Error calling LLM API: {e}")
+            logger.error(f"Error calling SiliconFlow API: {e}")
             return None
     
     def enhance_entity_extraction(self, text: str, existing_entities: list) -> Optional[Dict[str, Any]]:
-        """使用大模型增强实体抽取"""
+        """使用硅基流动大模型增强实体抽取"""
         if not self.client:
             return None
         
@@ -137,18 +152,28 @@ class LLMClient:
     "corrections": [
         {{"original": "原实体值", "corrected": "修正后的值", "reason": "修正原因"}}
     ]
-}}"""
+}}
+
+请确保返回有效的JSON格式，不要包含其他内容。"""
 
             response = self.client.chat.completions.create(
                 model=self.model_name,
                 messages=[{"role": "user", "content": prompt}],
                 temperature=0.1,
-                max_tokens=500
+                max_tokens=800
             )
             
             content = response.choices[0].message.content.strip()
+            
+            # 清理响应内容
+            if content.startswith("```json"):
+                content = content[7:]
+            if content.endswith("```"):
+                content = content[:-3]
+            content = content.strip()
+            
             return json.loads(content)
             
         except Exception as e:
-            logger.error(f"Error in entity enhancement: {e}")
+            logger.error(f"Error in SiliconFlow entity enhancement: {e}")
             return None

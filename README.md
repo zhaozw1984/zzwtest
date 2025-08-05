@@ -1,6 +1,13 @@
 # 语音控制机器人自然语言处理系统
 
-这是一个基于大模型的语音控制机器人自然语言处理系统，能够理解用户的语音指令，识别意图并提取相关参数。
+这是一个基于硅基流动大模型的语音控制机器人自然语言处理系统，能够理解用户的语音指令，识别意图并提取相关参数。
+
+## 🌟 硅基流动集成优势
+
+- **免费额度**：新用户注册送3亿token，完全免费使用
+- **多模型支持**：Qwen、DeepSeek、InternLM等多种开源大模型
+- **高性能**：自研推理加速引擎，响应速度快
+- **零成本开发**：多个模型完全免费，适合开发测试和生产使用
 
 ## 功能特性
 
@@ -47,11 +54,27 @@ cp .env.example .env
 
 编辑 `.env` 文件：
 ```env
-# 大模型API配置
-OPENAI_API_KEY=your_openai_api_key_here
-OPENAI_BASE_URL=https://api.openai.com/v1
-MODEL_NAME=gpt-3.5-turbo
+# 硅基流动API配置
+SILICONFLOW_API_KEY=your_siliconflow_api_key_here
+SILICONFLOW_BASE_URL=https://api.siliconflow.cn/v1
+MODEL_NAME=Qwen/Qwen2.5-72B-Instruct
 ```
+
+### 获取硅基流动API密钥
+
+1. 访问 [硅基流动官网](https://cloud.siliconflow.cn/)
+2. 注册并登录账户
+3. 进入"API密钥"页面，点击"新建API密钥"
+4. 复制生成的API密钥到配置文件中
+
+### 支持的模型
+
+硅基流动平台支持多种开源大模型：
+- `Qwen/Qwen2.5-72B-Instruct` (推荐，免费)
+- `Qwen/Qwen2.5-7B-Instruct` (免费)
+- `deepseek-ai/DeepSeek-V2.5` (高性能)
+- `Pro/deepseek-ai/DeepSeek-R1` (推理模型)
+- `internlm/internlm2_5-20b-chat`
 
 ### 3. 创建日志目录
 ```bash
@@ -193,10 +216,12 @@ python main.py server
 
 ## 注意事项
 
-- 确保大模型API密钥配置正确
+- 确保硅基流动API密钥配置正确
+- 硅基流动提供多个免费模型（如Qwen2.5-7B），适合开发测试
 - 系统支持离线运行（不使用大模型功能）
 - 建议在生产环境中配置日志轮转
 - 可根据实际场景调整置信度阈值
+- 硅基流动API兼容OpenAI接口格式，迁移简单
 
 ## 许可证
 

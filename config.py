@@ -8,10 +8,14 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-# API配置
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-OPENAI_BASE_URL = os.getenv("OPENAI_BASE_URL", "https://api.openai.com/v1")
-MODEL_NAME = os.getenv("MODEL_NAME", "gpt-3.5-turbo")
+# API配置 - 硅基流动
+SILICONFLOW_API_KEY = os.getenv("SILICONFLOW_API_KEY")
+SILICONFLOW_BASE_URL = os.getenv("SILICONFLOW_BASE_URL", "https://api.siliconflow.cn/v1")
+MODEL_NAME = os.getenv("MODEL_NAME", "Qwen/Qwen2.5-72B-Instruct")
+
+# 兼容旧配置
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", SILICONFLOW_API_KEY)
+OPENAI_BASE_URL = os.getenv("OPENAI_BASE_URL", SILICONFLOW_BASE_URL)
 
 # 支持的指令类型
 INTENT_TYPES = {
