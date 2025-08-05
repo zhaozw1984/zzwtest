@@ -1,0 +1,69 @@
+2025-08-05 06:00:45.271 | WARNING  | llm_client:__init__:28 - No OpenAI API key provided, LLM features will be disabled
+2025-08-05 06:00:45.273 | INFO     | nlp_processor:process_command:24 - Processing command: 巡检A区2号房主柜温度
+2025-08-05 06:00:45.274 | INFO     | intent_classifier:classify_intent:112 - Classified intent: patrol_inspection (巡检) with confidence 0.71
+2025-08-05 06:00:45.613 | INFO     | entity_extractor:extract_entities:192 - Extracted 4 entities from text: 巡检A区2号房主柜温度
+2025-08-05 06:00:45.613 | DEBUG    | entity_extractor:extract_entities:194 - Entity: location = A区 (confidence: 0.9)
+2025-08-05 06:00:45.613 | DEBUG    | entity_extractor:extract_entities:194 - Entity: location = 2号房 (confidence: 0.9)
+2025-08-05 06:00:45.613 | DEBUG    | entity_extractor:extract_entities:194 - Entity: equipment = 主柜 (confidence: 0.9)
+2025-08-05 06:00:45.613 | DEBUG    | entity_extractor:extract_entities:194 - Entity: parameter = 温度 (confidence: 0.9)
+2025-08-05 06:00:45.613 | WARNING  | llm_client:analyze_command:84 - LLM client not initialized, skipping LLM analysis
+2025-08-05 06:00:45.613 | INFO     | nlp_processor:process_command:55 - Command processed: patrol_inspection with confidence 0.62
+2025-08-05 06:00:50.896 | WARNING  | llm_client:__init__:28 - No OpenAI API key provided, LLM features will be disabled
+2025-08-05 06:00:50.898 | INFO     | nlp_processor:process_command:24 - Processing command: 巡检A区2号房主柜温度
+2025-08-05 06:00:50.899 | INFO     | intent_classifier:classify_intent:112 - Classified intent: patrol_inspection (巡检) with confidence 0.71
+2025-08-05 06:00:51.249 | INFO     | entity_extractor:extract_entities:192 - Extracted 4 entities from text: 巡检A区2号房主柜温度
+2025-08-05 06:00:51.249 | DEBUG    | entity_extractor:extract_entities:194 - Entity: location = A区 (confidence: 0.9)
+2025-08-05 06:00:51.249 | DEBUG    | entity_extractor:extract_entities:194 - Entity: location = 2号房 (confidence: 0.9)
+2025-08-05 06:00:51.249 | DEBUG    | entity_extractor:extract_entities:194 - Entity: equipment = 主柜 (confidence: 0.9)
+2025-08-05 06:00:51.249 | DEBUG    | entity_extractor:extract_entities:194 - Entity: parameter = 温度 (confidence: 0.9)
+2025-08-05 06:00:51.249 | WARNING  | llm_client:analyze_command:84 - LLM client not initialized, skipping LLM analysis
+2025-08-05 06:00:51.249 | INFO     | nlp_processor:process_command:55 - Command processed: patrol_inspection with confidence 0.62
+2025-08-05 06:00:51.249 | INFO     | nlp_processor:process_command:24 - Processing command: 开启B区空调
+2025-08-05 06:00:51.249 | INFO     | intent_classifier:classify_intent:112 - Classified intent: equipment_control (设备控制) with confidence 0.66
+2025-08-05 06:00:51.249 | INFO     | entity_extractor:extract_entities:192 - Extracted 3 entities from text: 开启B区空调
+2025-08-05 06:00:51.249 | DEBUG    | entity_extractor:extract_entities:194 - Entity: action = 开启 (confidence: 0.9)
+2025-08-05 06:00:51.249 | DEBUG    | entity_extractor:extract_entities:194 - Entity: location = B区 (confidence: 0.9)
+2025-08-05 06:00:51.249 | DEBUG    | entity_extractor:extract_entities:194 - Entity: equipment = 空调 (confidence: 0.9)
+2025-08-05 06:00:51.249 | WARNING  | llm_client:analyze_command:84 - LLM client not initialized, skipping LLM analysis
+2025-08-05 06:00:51.249 | INFO     | nlp_processor:process_command:55 - Command processed: equipment_control with confidence 0.60
+2025-08-05 06:00:51.249 | INFO     | nlp_processor:process_command:24 - Processing command: 查询UPS1状态
+2025-08-05 06:00:51.249 | INFO     | intent_classifier:classify_intent:112 - Classified intent: status_query (状态查询) with confidence 0.48
+2025-08-05 06:00:51.249 | INFO     | entity_extractor:extract_entities:192 - Extracted 1 entities from text: 查询UPS1状态
+2025-08-05 06:00:51.250 | DEBUG    | entity_extractor:extract_entities:194 - Entity: equipment = UPS1 (confidence: 0.9)
+2025-08-05 06:00:51.250 | WARNING  | llm_client:analyze_command:84 - LLM client not initialized, skipping LLM analysis
+2025-08-05 06:00:51.250 | INFO     | nlp_processor:process_command:55 - Command processed: status_query with confidence 0.51
+2025-08-05 06:00:51.250 | INFO     | nlp_processor:process_command:24 - Processing command: 前往C区3号房
+2025-08-05 06:00:51.250 | INFO     | intent_classifier:classify_intent:112 - Classified intent: navigation (导航移动) with confidence 0.66
+2025-08-05 06:00:51.250 | INFO     | entity_extractor:extract_entities:192 - Extracted 2 entities from text: 前往C区3号房
+2025-08-05 06:00:51.250 | DEBUG    | entity_extractor:extract_entities:194 - Entity: location = C区 (confidence: 0.9)
+2025-08-05 06:00:51.250 | DEBUG    | entity_extractor:extract_entities:194 - Entity: location = 3号房 (confidence: 0.9)
+2025-08-05 06:00:51.250 | WARNING  | llm_client:analyze_command:84 - LLM client not initialized, skipping LLM analysis
+2025-08-05 06:00:51.250 | INFO     | nlp_processor:process_command:55 - Command processed: navigation with confidence 0.60
+2025-08-05 06:00:51.250 | INFO     | nlp_processor:process_command:24 - Processing command: 关闭主柜电源
+2025-08-05 06:00:51.250 | INFO     | intent_classifier:classify_intent:112 - Classified intent: equipment_control (设备控制) with confidence 0.66
+2025-08-05 06:00:51.250 | INFO     | entity_extractor:extract_entities:192 - Extracted 2 entities from text: 关闭主柜电源
+2025-08-05 06:00:51.250 | DEBUG    | entity_extractor:extract_entities:194 - Entity: action = 关闭 (confidence: 0.9)
+2025-08-05 06:00:51.250 | DEBUG    | entity_extractor:extract_entities:194 - Entity: equipment = 主柜 (confidence: 0.9)
+2025-08-05 06:00:51.250 | WARNING  | llm_client:analyze_command:84 - LLM client not initialized, skipping LLM analysis
+2025-08-05 06:00:51.250 | INFO     | nlp_processor:process_command:55 - Command processed: equipment_control with confidence 0.60
+2025-08-05 06:00:51.250 | INFO     | nlp_processor:process_command:24 - Processing command: 检查配电室湿度
+2025-08-05 06:00:51.250 | INFO     | intent_classifier:classify_intent:112 - Classified intent: patrol_inspection (巡检) with confidence 0.71
+2025-08-05 06:00:51.250 | INFO     | entity_extractor:extract_entities:192 - Extracted 2 entities from text: 检查配电室湿度
+2025-08-05 06:00:51.250 | DEBUG    | entity_extractor:extract_entities:194 - Entity: location = 配电室 (confidence: 0.9)
+2025-08-05 06:00:51.250 | DEBUG    | entity_extractor:extract_entities:194 - Entity: parameter = 湿度 (confidence: 0.9)
+2025-08-05 06:00:51.250 | WARNING  | llm_client:analyze_command:84 - LLM client not initialized, skipping LLM analysis
+2025-08-05 06:00:51.251 | INFO     | nlp_processor:process_command:55 - Command processed: patrol_inspection with confidence 0.62
+2025-08-05 06:00:51.251 | INFO     | nlp_processor:process_command:24 - Processing command: 设置空调温度为25度
+2025-08-05 06:00:51.251 | INFO     | intent_classifier:classify_intent:112 - Classified intent: equipment_control (设备控制) with confidence 0.66
+2025-08-05 06:00:51.251 | INFO     | entity_extractor:extract_entities:192 - Extracted 3 entities from text: 设置空调温度为25度
+2025-08-05 06:00:51.251 | DEBUG    | entity_extractor:extract_entities:194 - Entity: action = 设置 (confidence: 0.9)
+2025-08-05 06:00:51.251 | DEBUG    | entity_extractor:extract_entities:194 - Entity: equipment = 空调 (confidence: 0.9)
+2025-08-05 06:00:51.251 | DEBUG    | entity_extractor:extract_entities:194 - Entity: parameter = 温度 (confidence: 0.9)
+2025-08-05 06:00:51.251 | WARNING  | llm_client:analyze_command:84 - LLM client not initialized, skipping LLM analysis
+2025-08-05 06:00:51.251 | INFO     | nlp_processor:process_command:55 - Command processed: equipment_control with confidence 0.60
+2025-08-05 06:00:51.251 | INFO     | nlp_processor:process_command:24 - Processing command: 确认高温报警
+2025-08-05 06:00:51.251 | INFO     | intent_classifier:classify_intent:112 - Classified intent: alarm_handling (报警处理) with confidence 0.78
+2025-08-05 06:00:51.251 | INFO     | entity_extractor:extract_entities:192 - Extracted 1 entities from text: 确认高温报警
+2025-08-05 06:00:51.251 | DEBUG    | entity_extractor:extract_entities:194 - Entity: alarm_type = 高温报警 (confidence: 0.9)
+2025-08-05 06:00:51.251 | WARNING  | llm_client:analyze_command:84 - LLM client not initialized, skipping LLM analysis
+2025-08-05 06:00:51.251 | INFO     | nlp_processor:process_command:55 - Command processed: alarm_handling with confidence 0.66
