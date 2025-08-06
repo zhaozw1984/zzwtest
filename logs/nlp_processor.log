@@ -67,3 +67,93 @@
 2025-08-05 06:00:51.251 | DEBUG    | entity_extractor:extract_entities:194 - Entity: alarm_type = 高温报警 (confidence: 0.9)
 2025-08-05 06:00:51.251 | WARNING  | llm_client:analyze_command:84 - LLM client not initialized, skipping LLM analysis
 2025-08-05 06:00:51.251 | INFO     | nlp_processor:process_command:55 - Command processed: alarm_handling with confidence 0.66
+<<<<<<< Current (Your changes)
+=======
+2025-08-05 06:38:20.240 | WARNING  | llm_client:__init__:29 - No SiliconFlow API key provided, LLM features will be disabled
+2025-08-05 06:38:20.242 | INFO     | nlp_processor:process_command:24 - Processing command: 巡检A区2号房主柜温度
+2025-08-05 06:38:20.243 | INFO     | intent_classifier:classify_intent:112 - Classified intent: patrol_inspection (巡检) with confidence 0.71
+2025-08-05 06:38:20.593 | INFO     | entity_extractor:extract_entities:192 - Extracted 4 entities from text: 巡检A区2号房主柜温度
+2025-08-05 06:38:20.593 | DEBUG    | entity_extractor:extract_entities:194 - Entity: location = A区 (confidence: 0.9)
+2025-08-05 06:38:20.593 | DEBUG    | entity_extractor:extract_entities:194 - Entity: location = 2号房 (confidence: 0.9)
+2025-08-05 06:38:20.593 | DEBUG    | entity_extractor:extract_entities:194 - Entity: equipment = 主柜 (confidence: 0.9)
+2025-08-05 06:38:20.593 | DEBUG    | entity_extractor:extract_entities:194 - Entity: parameter = 温度 (confidence: 0.9)
+2025-08-05 06:38:20.593 | WARNING  | llm_client:analyze_command:89 - SiliconFlow client not initialized, skipping LLM analysis
+2025-08-05 06:38:20.593 | INFO     | nlp_processor:process_command:55 - Command processed: patrol_inspection with confidence 0.62
+>>>>>>> Incoming (Background Agent changes)
+2025-08-06 10:46:06.815 | INFO     | llm_client:__init__:27 - Initialized SiliconFlow client with model: Qwen/Qwen2.5-72B-Instruct
+2025-08-06 10:46:16.864 | INFO     | nlp_processor:process_command:24 - Processing command: 巡检A区2号房主柜温度
+2025-08-06 10:46:16.864 | INFO     | intent_classifier:classify_intent:112 - Classified intent: patrol_inspection (巡检) with confidence 0.71
+2025-08-06 10:46:17.370 | INFO     | entity_extractor:extract_entities:192 - Extracted 4 entities from text: 巡检A区2号房主柜温度
+2025-08-06 10:46:17.370 | DEBUG    | entity_extractor:extract_entities:194 - Entity: location = A区 (confidence: 0.9)
+2025-08-06 10:46:17.370 | DEBUG    | entity_extractor:extract_entities:194 - Entity: location = 2号房 (confidence: 0.9)
+2025-08-06 10:46:17.370 | DEBUG    | entity_extractor:extract_entities:194 - Entity: equipment = 主柜 (confidence: 0.9)
+2025-08-06 10:46:17.370 | DEBUG    | entity_extractor:extract_entities:194 - Entity: parameter = 温度 (confidence: 0.9)
+2025-08-06 10:46:17.370 | DEBUG    | llm_client:analyze_command:95 - Calling SiliconFlow API with model: Qwen/Qwen2.5-72B-Instruct
+2025-08-06 10:46:17.855 | ERROR    | llm_client:analyze_command:132 - Error calling SiliconFlow API: Error code: 401 - Invalid token
+2025-08-06 10:46:17.855 | INFO     | nlp_processor:process_command:55 - Command processed: patrol_inspection with confidence 0.62
+2025-08-06 10:47:47.224 | INFO     | nlp_processor:process_command:24 - Processing command: 巡检C区52号房主柜温度
+2025-08-06 10:47:47.224 | INFO     | intent_classifier:classify_intent:112 - Classified intent: patrol_inspection (巡检) with confidence 0.71
+2025-08-06 10:47:47.224 | INFO     | entity_extractor:extract_entities:192 - Extracted 4 entities from text: 巡检C区52号房主柜温度
+2025-08-06 10:47:47.224 | DEBUG    | entity_extractor:extract_entities:194 - Entity: location = C区 (confidence: 0.9)
+2025-08-06 10:47:47.224 | DEBUG    | entity_extractor:extract_entities:194 - Entity: location = 52号房 (confidence: 0.9)
+2025-08-06 10:47:47.224 | DEBUG    | entity_extractor:extract_entities:194 - Entity: equipment = 主柜 (confidence: 0.9)
+2025-08-06 10:47:47.224 | DEBUG    | entity_extractor:extract_entities:194 - Entity: parameter = 温度 (confidence: 0.9)
+2025-08-06 10:47:47.224 | DEBUG    | llm_client:analyze_command:95 - Calling SiliconFlow API with model: Qwen/Qwen2.5-72B-Instruct
+2025-08-06 10:47:47.336 | ERROR    | llm_client:analyze_command:132 - Error calling SiliconFlow API: Error code: 401 - Invalid token
+2025-08-06 10:47:47.336 | INFO     | nlp_processor:process_command:55 - Command processed: patrol_inspection with confidence 0.62
+2025-08-06 10:55:16.334 | INFO     | llm_client:__init__:27 - Initialized SiliconFlow client with model: Qwen/Qwen2.5-72B-Instruct
+2025-08-06 10:55:16.339 | INFO     | nlp_processor:process_command:24 - Processing command: 巡检E区2号房副柜温度
+2025-08-06 10:55:16.339 | INFO     | intent_classifier:classify_intent:112 - Classified intent: patrol_inspection (巡检) with confidence 0.71
+2025-08-06 10:55:16.742 | INFO     | entity_extractor:extract_entities:192 - Extracted 4 entities from text: 巡检E区2号房副柜温度
+2025-08-06 10:55:16.742 | DEBUG    | entity_extractor:extract_entities:194 - Entity: location = E区 (confidence: 0.9)
+2025-08-06 10:55:16.742 | DEBUG    | entity_extractor:extract_entities:194 - Entity: location = 2号房 (confidence: 0.9)
+2025-08-06 10:55:16.742 | DEBUG    | entity_extractor:extract_entities:194 - Entity: equipment = 副柜 (confidence: 0.9)
+2025-08-06 10:55:16.747 | DEBUG    | entity_extractor:extract_entities:194 - Entity: parameter = 温度 (confidence: 0.9)
+2025-08-06 10:55:16.747 | DEBUG    | llm_client:analyze_command:95 - Calling SiliconFlow API with model: Qwen/Qwen2.5-72B-Instruct
+2025-08-06 10:55:17.127 | ERROR    | llm_client:analyze_command:132 - Error calling SiliconFlow API: Error code: 401 - Invalid token
+2025-08-06 10:55:17.127 | INFO     | nlp_processor:process_command:55 - Command processed: patrol_inspection with confidence 0.62
+2025-08-06 10:55:45.999 | INFO     | llm_client:__init__:27 - Initialized SiliconFlow client with model: Qwen/Qwen2.5-72B-Instruct
+2025-08-06 11:07:40.762 | INFO     | nlp_processor:process_command:24 - Processing command: 巡检A区2号房主柜温度
+2025-08-06 11:07:40.763 | INFO     | intent_classifier:classify_intent:112 - Classified intent: patrol_inspection (巡检) with confidence 0.71
+2025-08-06 11:07:41.287 | INFO     | entity_extractor:extract_entities:192 - Extracted 4 entities from text: 巡检A区2号房主柜温度
+2025-08-06 11:07:41.287 | DEBUG    | entity_extractor:extract_entities:194 - Entity: location = A区 (confidence: 0.9)
+2025-08-06 11:07:41.288 | DEBUG    | entity_extractor:extract_entities:194 - Entity: location = 2号房 (confidence: 0.9)
+2025-08-06 11:07:41.288 | DEBUG    | entity_extractor:extract_entities:194 - Entity: equipment = 主柜 (confidence: 0.9)
+2025-08-06 11:07:41.288 | DEBUG    | entity_extractor:extract_entities:194 - Entity: parameter = 温度 (confidence: 0.9)
+2025-08-06 11:07:41.289 | DEBUG    | llm_client:analyze_command:95 - Calling SiliconFlow API with model: Qwen/Qwen2.5-72B-Instruct
+2025-08-06 11:07:49.068 | ERROR    | llm_client:analyze_command:132 - Error calling SiliconFlow API: Connection error.
+2025-08-06 11:07:49.069 | INFO     | nlp_processor:process_command:55 - Command processed: patrol_inspection with confidence 0.62
+2025-08-06 11:14:13.512 | INFO     | nlp_processor:process_command:24 - Processing command: ??A?2??????
+2025-08-06 11:14:13.512 | INFO     | intent_classifier:classify_intent:112 - Classified intent: unknown (未知意图) with confidence 0.10
+2025-08-06 11:14:13.512 | INFO     | entity_extractor:extract_entities:192 - Extracted 0 entities from text: ??A?2??????
+2025-08-06 11:14:13.512 | DEBUG    | llm_client:analyze_command:95 - Calling SiliconFlow API with model: Qwen/Qwen2.5-72B-Instruct
+2025-08-06 11:14:20.980 | ERROR    | llm_client:analyze_command:132 - Error calling SiliconFlow API: Connection error.
+2025-08-06 11:14:20.980 | INFO     | nlp_processor:process_command:55 - Command processed: unknown with confidence 0.05
+2025-08-06 11:16:22.288 | INFO     | llm_client:__init__:27 - Initialized SiliconFlow client with model: Qwen/Qwen2.5-72B-Instruct
+2025-08-06 11:16:22.288 | INFO     | nlp_processor:process_command:24 - Processing command: 巡检E区2号房副柜温度
+2025-08-06 11:16:22.294 | INFO     | intent_classifier:classify_intent:112 - Classified intent: patrol_inspection (巡检) with confidence 0.71
+2025-08-06 11:16:22.694 | INFO     | entity_extractor:extract_entities:192 - Extracted 4 entities from text: 巡检E区2号房副柜温度
+2025-08-06 11:16:22.694 | DEBUG    | entity_extractor:extract_entities:194 - Entity: location = E区 (confidence: 0.9)
+2025-08-06 11:16:22.694 | DEBUG    | entity_extractor:extract_entities:194 - Entity: location = 2号房 (confidence: 0.9)
+2025-08-06 11:16:22.694 | DEBUG    | entity_extractor:extract_entities:194 - Entity: equipment = 副柜 (confidence: 0.9)
+2025-08-06 11:16:22.694 | DEBUG    | entity_extractor:extract_entities:194 - Entity: parameter = 温度 (confidence: 0.9)
+2025-08-06 11:16:22.694 | DEBUG    | llm_client:analyze_command:95 - Calling SiliconFlow API with model: Qwen/Qwen2.5-72B-Instruct
+2025-08-06 11:16:29.649 | DEBUG    | llm_client:analyze_command:107 - SiliconFlow response: {
+    "intent_type": "patrol_inspection",
+    "intent_confidence": 0.95,
+    "entities": [
+        {"type": "location", "value": "E区", "start": 2, "end": 4},
+        {"type": "location", "value": "2号房", "start": 4, "end": 7},
+        {"type": "equipment", "value": "副柜", "start": 7, "end": 9},
+        {"type": "parameter", "value": "温度", "start": 9, "end": 11}
+    ],
+    "reasoning": "用户要求巡检E区2号房的副柜温度，这是一个典型的巡检指令",
+    "structured_command": {
+        "action": "patrol_inspection",
+        "location": {"zone": "E", "room": "2"},
+        "equipment": "副柜",
+        "parameter": "温度"
+    }
+}
+2025-08-06 11:16:29.649 | INFO     | llm_client:analyze_command:120 - Successfully parsed SiliconFlow response for text: 巡检E区2号房副柜温度
+2025-08-06 11:16:29.649 | INFO     | nlp_processor:process_command:55 - Command processed: patrol_inspection with confidence 0.94
